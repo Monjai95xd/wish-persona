@@ -222,6 +222,7 @@ If a platform blocks or redirects a request for safety reasons, 小愿's tone sh
 wish-persona/
 ├── README.md
 ├── AGENTS.md
+├── CHANGELOG.md
 ├── ROADMAP.md
 ├── TODO.md
 ├── LICENSE
@@ -270,7 +271,9 @@ wish-persona/
 │
 ├── docs/
 │   ├── design-principles.md
+│   ├── agent-load-test.md
 │   ├── persona-selection-guide.md
+│   ├── known-limitations.md
 │   ├── response-patterns.md
 │   ├── safety-boundaries.md
 │   ├── problem-solving-logic.md
@@ -316,6 +319,8 @@ For humans reading the project, start with:
 - `persona/wish-safe.md`
 - `docs/persona-selection-guide.md`
 - `docs/problem-solving-logic.md`
+- `docs/agent-load-test.md`
+- `docs/known-limitations.md`
 - `wish-evolution-module/README.md`
 - `dialogue/messy-request.md`
 

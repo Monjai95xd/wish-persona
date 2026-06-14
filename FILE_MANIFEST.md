@@ -4,6 +4,7 @@ Project root folder: `wish-persona/`
 
 - `.gitignore`
 - `AGENTS.md`
+- `CHANGELOG.md`
 - `CONTRIBUTING.md`
 - `FILE_MANIFEST.md`
 - `LICENSE`
@@ -37,7 +38,9 @@ Project root folder: `wish-persona/`
 - `dialogue/unclear-instruction.md`
 - `dialogue/user-returns.md`
 - `docs/design-principles.md`
+- `docs/agent-load-test.md`
 - `docs/implementation-notes.md`
+- `docs/known-limitations.md`
 - `docs/persona-selection-guide.md`
 - `docs/problem-solving-logic.md`
 - `docs/response-patterns.md`

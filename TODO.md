@@ -192,51 +192,52 @@ Acceptance criteria:
 
 Goal: publish the project so users can give the GitHub link to agents.
 
-- [ ] Confirm GitHub repo name, likely `wish-persona`.
-- [ ] Confirm whether the repo should be public.
-- [ ] Create a GitHub repository if connector or `gh` permissions allow it.
-- [ ] If repo creation is not available, ask the user to create an empty GitHub repo and provide the URL.
-- [ ] Add the GitHub remote.
-- [ ] Push `main` to GitHub.
-- [ ] Confirm the GitHub URL works.
+- [x] Confirm GitHub repo name, likely `wish-persona`.
+- [x] Confirm whether the repo should be public.
+- [x] Create a GitHub repository if connector or `gh` permissions allow it.
+- [x] If repo creation is not available, ask the user to create an empty GitHub repo and provide the URL.
+- [x] Add the GitHub remote.
+- [x] Push `main` to GitHub.
+- [x] Confirm the GitHub URL works.
 
 Acceptance criteria:
 
-- [ ] The repo is accessible from GitHub.
-- [ ] The default branch contains `AGENTS.md`, `README.md`, and all persona files.
-- [ ] A user can copy the GitHub URL and give it to an agent.
+- [x] The repo is accessible from GitHub.
+- [x] The default branch contains `AGENTS.md`, `README.md`, and all persona files.
+- [x] A user can copy the GitHub URL and give it to an agent.
 
 ## Phase 10 — Agent Load Test
 
 Goal: verify that another agent can understand and use the repo.
 
-- [ ] Create a test prompt for OpenClaw / Hermes / generic agent.
-- [ ] Ask an agent to load the repo from the GitHub URL.
-- [ ] Check whether it reads `AGENTS.md` first.
-- [ ] Check whether it understands 小愿's identity.
-- [ ] Check whether it uses multi-version problem solving.
-- [ ] Check whether it avoids over-heavy safety policy language.
-- [ ] Record failure cases and update docs.
+- [x] Create a test prompt for OpenClaw / Hermes / generic agent.
+- [x] Create `docs/agent-load-test.md` as the documented test checklist.
+- [!] Ask an external agent to load the repo from the GitHub URL.
+- [!] Check whether the external agent reads `AGENTS.md` first.
+- [!] Check whether the external agent understands 小愿's identity.
+- [!] Check whether the external agent uses multi-version problem solving.
+- [!] Check whether the external agent avoids over-heavy safety policy language.
+- [!] Record real external-agent failure cases after testing.
 
 Acceptance criteria:
 
-- [ ] The agent can describe 小愿's identity correctly.
-- [ ] The agent can respond to a vague task with multiple useful versions.
-- [ ] The agent can use story files as identity grounding.
+- [!] The agent can describe 小愿's identity correctly.
+- [!] The agent can respond to a vague task with multiple useful versions.
+- [!] The agent can use story files as identity grounding.
 
 ## Phase 11 — Release Packaging
 
 Goal: make the first public version easy to identify and improve later.
 
-- [ ] Add a `CHANGELOG.md`.
+- [x] Add a `CHANGELOG.md`.
 - [ ] Add version label `v0.1.0` after first GitHub upload.
-- [ ] Update `ROADMAP.md` to match the new agent-package direction.
-- [ ] Add known limitations.
-- [ ] Add future ideas for web demo only after the persona package is stable.
+- [x] Update `ROADMAP.md` to match the new agent-package direction.
+- [x] Add known limitations.
+- [x] Add future ideas for web demo only after the persona package is stable.
 
 Acceptance criteria:
 
-- [ ] Users can tell what version they are using.
+- [x] Users can tell what version they are using.
 - [ ] Future changes can be tracked clearly.
 - [ ] The project remains documentation-first until the agent package is stable.
 
