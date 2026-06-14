@@ -39,13 +39,16 @@ Project root folder: `wish-persona/`
 - `dialogue/user-returns.md`
 - `docs/design-principles.md`
 - `docs/agent-load-test.md`
+- `docs/external-agent-test-report-2026-06-14.md`
 - `docs/implementation-notes.md`
 - `docs/known-limitations.md`
 - `docs/persona-selection-guide.md`
+- `docs/persona-activation-test.md`
 - `docs/problem-solving-logic.md`
 - `docs/response-patterns.md`
 - `docs/safety-boundaries.md`
 - `docs/use-cases.md`
+- `docs/visual-identity-notes.md`
 - `examples/en/lightweight-redirection.md`
 - `examples/en/vague-user-input.md`
 - `examples/paired-dialogue-library.md`

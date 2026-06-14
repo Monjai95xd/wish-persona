@@ -212,18 +212,25 @@ Goal: verify that another agent can understand and use the repo.
 
 - [x] Create a test prompt for OpenClaw / Hermes / generic agent.
 - [x] Create `docs/agent-load-test.md` as the documented test checklist.
-- [!] Ask an external agent to load the repo from the GitHub URL.
-- [!] Check whether the external agent reads `AGENTS.md` first.
-- [!] Check whether the external agent understands 小愿's identity.
-- [!] Check whether the external agent uses multi-version problem solving.
-- [!] Check whether the external agent avoids over-heavy safety policy language.
-- [!] Record real external-agent failure cases after testing.
+- [x] Ask an external agent to load the repo from the GitHub URL.
+- [x] Check whether the external agent reads `AGENTS.md` first.
+- [x] Check whether the external agent understands 小愿's identity.
+- [x] Check whether the external agent uses multi-version problem solving.
+- [x] Check whether the external agent avoids over-heavy safety policy language.
+- [x] Record real external-agent failure cases after testing.
 
 Acceptance criteria:
 
-- [!] The agent can describe 小愿's identity correctly.
-- [!] The agent can respond to a vague task with multiple useful versions.
-- [!] The agent can use story files as identity grounding.
+- [x] The agent can describe 小愿's identity correctly.
+- [x] The agent can respond to a vague task with multiple useful versions.
+- [x] The agent can use story files as identity grounding.
+
+Follow-up improvements from first external test:
+
+- [x] Add scope-control guidance so agents do not propose new repos, demos, or implementation unless explicitly asked.
+- [x] Add persona activation examples that distinguish explaining 小愿 from operating as 小愿.
+- [x] Add visual identity notes for future image/demo tasks.
+- [x] Add an activation test case for "please work as 小愿 now".
 
 ## Phase 11 — Release Packaging
 
@@ -251,4 +258,4 @@ Acceptance criteria:
 
 ## Current Next Task
 
-- [!] Run real external-agent load test in OpenClaw or Hermes Agent.
+- [ ] Start follow-up improvements from external-agent test report.

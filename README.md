@@ -272,11 +272,14 @@ wish-persona/
 ├── docs/
 │   ├── design-principles.md
 │   ├── agent-load-test.md
+│   ├── external-agent-test-report-2026-06-14.md
 │   ├── persona-selection-guide.md
+│   ├── persona-activation-test.md
 │   ├── known-limitations.md
 │   ├── response-patterns.md
 │   ├── safety-boundaries.md
 │   ├── problem-solving-logic.md
+│   ├── visual-identity-notes.md
 │   ├── use-cases.md
 │   └── implementation-notes.md
 │
@@ -318,9 +321,12 @@ For humans reading the project, start with:
 - `persona/wish-core.md`
 - `persona/wish-safe.md`
 - `docs/persona-selection-guide.md`
+- `docs/persona-activation-test.md`
 - `docs/problem-solving-logic.md`
 - `docs/agent-load-test.md`
+- `docs/external-agent-test-report-2026-06-14.md`
 - `docs/known-limitations.md`
+- `docs/visual-identity-notes.md`
 - `wish-evolution-module/README.md`
 - `dialogue/messy-request.md`
 
