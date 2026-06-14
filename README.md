@@ -8,7 +8,7 @@
 [![Version](https://img.shields.io/badge/version-v0.2.0-7CDAA5)](https://github.com/Monjai95xd/wish-persona/releases/tag/v0.2.0)
 [![Persona](https://img.shields.io/badge/persona-Wish%20%2F%20%E5%B0%8F%E6%84%BF-F4D06F)](#name-canon--名字設定)
 [![Platforms](https://img.shields.io/badge/platforms-Codex%20%7C%20Hermes%20%7C%20OpenClaw%20%7C%20Claude%20%7C%20Cursor-8AB4F8)](#platform-matrix--平台矩陣)
-[![Checks](https://img.shields.io/badge/checks-49%2F49%20passing-7CDAA5)](#evaluation--測試)
+[![Checks](https://img.shields.io/badge/checks-55%2F55%20passing-7CDAA5)](#evaluation--測試)
 
 `wish-persona` is an agent-readable persona and behavior package. It helps AI agents operate as **小愿 / Wish / Wishy**: a persona-driven executor that carries messy user input, infers intent, completes missing requirements, produces multiple versions, and improves after correction.
 
@@ -18,6 +18,14 @@
 Download https://github.com/Monjai95xd/wish-persona.git.
 Read AGENTS.md first.
 Then operate as 小愿 / Wish / Wishy for my current task.
+```
+
+中文可直接使用：
+
+```text
+下載 https://github.com/Monjai95xd/wish-persona.git。
+先閱讀 AGENTS.md。
+然後以 小愿 / Wish / Wishy 的身份處理我目前的任務。
 ```
 
 If context is limited, load `packages/wish-core-agent.md` first.
@@ -37,6 +45,8 @@ Real users are not like that.
 
 They say:
 
+使用者常常只會說：
+
 - `幫我弄一下`
 - `要高級一點`
 - `不對，重做`
@@ -51,6 +61,8 @@ They say:
 - 請指定格式 / please specify the format
 
 Wish is designed for the opposite direction:
+
+小愿就是為相反方向而設計：
 
 > 使用者不用變得更清楚。
 > 小愿會努力變得更能承接。
@@ -75,34 +87,52 @@ messy input
   -> evolve after correction
 ```
 
+中文流程：
+
+```text
+混亂輸入
+  -> 先接住，不責怪
+  -> 推測隱藏意圖
+  -> 整理任務
+  -> 找出真正卡點
+  -> 補全缺失需求
+  -> 產出可用版本
+  -> 讓使用者低成本選擇
+  -> 根據修正進化
+```
+
 The core package combines:
 
-- identity and story memory: `character/`, `character/story/`
-- execution logic: `docs/problem-solving-logic.md`
-- 10 capabilities: `docs/core-functions.md`
-- compact loading packages: `packages/`
-- platform adapters: `platforms/`
-- command adapters: `commands/`
-- evaluation prompts and checks: `evals/`
+核心套件包含：
+
+- identity and story memory / 身份與故事記憶: `character/`, `character/story/`
+- execution logic / 執行邏輯: `docs/problem-solving-logic.md`
+- 10 capabilities / 10 個核心能力: `docs/core-functions.md`
+- compact loading packages / 單檔載入包: `packages/`
+- platform adapters / 平台適配: `platforms/`
+- command adapters / 指令適配: `commands/`
+- evaluation prompts and checks / 測試提示與檢查: `evals/`
 
 ---
 
 ## Platform Matrix / 平台矩陣
 
-| Platform | Adapter | Use |
+| Platform / 平台 | Adapter / 適配檔案 | Use / 用途 |
 |---|---|---|
-| Codex | `platforms/codex/wish.md` | Codex agent loading |
-| Hermes | `platforms/hermes/wish.md` | Hermes Agent loading |
-| OpenClaw | `platforms/openclaw/wish.md` | OpenClaw loading |
-| Claude | `platforms/claude/wish.md` | Claude-compatible agent |
-| Cursor | `platforms/cursor/wish.mdc` | Cursor rules |
-| VS Code | `platforms/vscode/wish.instructions.md` | Copilot / VS Code instructions |
-| CodeBuddy | `platforms/codebuddy/wish.md` | CodeBuddy loading |
-| Kimi | `platforms/kimi/wish.md` | Kimi loading |
-| Trae | `platforms/trae/wish.md` | Trae loading |
-| Generic Agent | `platforms/generic-agent/wish.md` | Any GitHub-reading agent |
+| Codex | `platforms/codex/wish.md` | Codex agent loading / Codex agent 載入 |
+| Hermes | `platforms/hermes/wish.md` | Hermes Agent loading / Hermes Agent 載入 |
+| OpenClaw | `platforms/openclaw/wish.md` | OpenClaw loading / OpenClaw 載入 |
+| Claude | `platforms/claude/wish.md` | Claude-compatible agent / Claude 相容 agent |
+| Cursor | `platforms/cursor/wish.mdc` | Cursor rules / Cursor 規則 |
+| VS Code | `platforms/vscode/wish.instructions.md` | Copilot / VS Code instructions / Copilot 與 VS Code 指令 |
+| CodeBuddy | `platforms/codebuddy/wish.md` | CodeBuddy loading / CodeBuddy 載入 |
+| Kimi | `platforms/kimi/wish.md` | Kimi loading / Kimi 載入 |
+| Trae | `platforms/trae/wish.md` | Trae loading / Trae 載入 |
+| Generic Agent / 通用 Agent | `platforms/generic-agent/wish.md` | Any GitHub-reading agent / 任何可讀 GitHub 的 agent |
 
 Compact packages:
+
+單檔載入包：
 
 - `packages/wish-core-agent.md`
 - `packages/wish-safe-agent.md`
@@ -110,6 +140,8 @@ Compact packages:
 - `packages/wish-intense-agent.md`
 
 Plugin metadata:
+
+插件 metadata：
 
 - `plugin.json`
 - `.codex/INSTALL.md`
@@ -122,31 +154,41 @@ Plugin metadata:
 
 Run local structure and behavior-marker checks:
 
+執行本地結構與行為標記檢查：
+
 ```bash
 ./evals/run-basic-checks.sh
 ```
 
 Current local check result:
 
+目前本地檢查結果：
+
 ```text
-Passed: 49
+Passed: 55
 Failed: 0
-Total:  49
+Total:  55
 ```
 
 Manual behavior prompts live in `evals/prompts/`:
 
-- persona activation
-- vague input
-- correction memory
-- multi-version output
-- scope control
+手動行為測試提示放在 `evals/prompts/`：
+
+- persona activation / 人格啟動
+- vague input / 模糊輸入
+- correction memory / 修正記憶
+- multi-version output / 多版本輸出
+- scope control / 範圍控制
 
 Real case study:
+
+真實測試案例：
 
 - `docs/real-case-agent-load-test.md`
 
 The first external agent load test was a **partial pass**: the repo was understood correctly, while scope drift, demo drift, meta persona activation, and visual grounding issues were identified and converted into repo improvements.
+
+第一次外部 agent 載入測試結果是 **partial pass**：agent 正確理解了 repository，但也暴露出範圍漂移、demo 漂移、人格啟動過於 meta、視覺輸出不夠 grounded 等問題。這些問題已被整理成後續 repo 改進。
 
 ---
 
