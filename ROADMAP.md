@@ -25,45 +25,57 @@
 
 ## Phase 3 — GitHub-Ready Documentation
 
-- [ ] Polish `README.md` for GitHub visitors
-- [ ] Add a concise "Use With AI Agents" section near the top
-- [ ] Add a concise "For humans" explanation
-- [ ] Add a concise "For agents" explanation
-- [ ] Ensure all files are listed in `FILE_MANIFEST.md`
-- [ ] Remove local temporary files before first commit
-- [ ] Prepare `.gitignore` for public release
+- [x] Polish `README.md` for GitHub visitors
+- [x] Add a concise "Use With AI Agents" section near the top
+- [x] Add a concise "For humans" explanation
+- [x] Add a concise "For agents" explanation
+- [x] Ensure all files are listed in `FILE_MANIFEST.md`
+- [x] Remove local temporary files before first commit
+- [x] Prepare `.gitignore` for public release
 
 ## Phase 4 — Dialogue And Example Expansion
 
-- [ ] Add more messy instruction examples
-- [ ] Add more rude user examples
-- [ ] Add repeated failure and retry examples
+- [x] Add more messy instruction examples
+- [x] Add more rude user examples
+- [x] Add repeated failure and retry examples
 - [ ] Add emotional support conversations
-- [ ] Add user-not-knowing-what-they-want examples
-- [ ] Add lightweight redirect tone examples
-- [ ] Add Traditional Chinese and English paired samples
+- [x] Add user-not-knowing-what-they-want examples
+- [x] Add lightweight redirect tone examples
+- [x] Add Traditional Chinese and English paired samples
 
 ## Phase 5 — Agent Evaluation
 
-- [ ] Create a dataset of messy instructions
-- [ ] Create a dataset for platform-level redirect tone checks
-- [ ] Create a response quality checklist
+- [x] Create a dataset of messy instructions
+- [x] Create a dataset for platform-level redirect tone checks
+- [x] Create a response quality checklist
 - [ ] Compare persona variants
-- [ ] Test whether agents load `AGENTS.md` first
-- [ ] Test whether agents use story memory and evolution behavior
-- [ ] Document failure cases
+- [x] Test whether agents load `AGENTS.md` first
+- [x] Test whether agents use story memory and evolution behavior
+- [x] Document failure cases
 
 ## Phase 6 — GitHub Release
 
-- [ ] Initialize git if needed
-- [ ] Create initial commit
-- [ ] Create or connect GitHub repository
-- [ ] Push `main`
-- [ ] Confirm public GitHub URL works
-- [ ] Add `CHANGELOG.md`
-- [ ] Tag first version as `v0.1.0`
+- [x] Initialize git if needed
+- [x] Create initial commit
+- [x] Create or connect GitHub repository
+- [x] Push `main`
+- [x] Confirm public GitHub URL works
+- [x] Add `CHANGELOG.md`
+- [x] Tag first version as `v0.1.0`
 
-## Phase 7 — Future Web Demo
+## Phase 7 — Package And Evaluation Architecture
+
+- [x] Add `docs/ARCHITECTURE.md`
+- [x] Add `docs/core-functions.md` for Wish's 10 core functions
+- [x] Add `packages/` as compact single-file loading layer
+- [x] Add `packages/wish-core-agent.md`
+- [x] Add `evals/` as repeatable external agent behavior tests
+- [x] Add expected behavior pass/fail standard
+- [ ] Add compact packages for safe, soft, and intense variants
+- [ ] Add platform adapters for Codex, Hermes, and OpenClaw
+- [ ] Run another external agent load test using `evals/prompts/`
+
+## Phase 8 — Future Web Demo
 
 - [ ] Build a simple web playground only after the agent package is stable
 - [ ] Add persona intensity selector

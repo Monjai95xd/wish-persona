@@ -39,6 +39,8 @@ Project root folder: `wish-persona/`
 - `dialogue/user-returns.md`
 - `docs/design-principles.md`
 - `docs/agent-load-test.md`
+- `docs/ARCHITECTURE.md`
+- `docs/core-functions.md`
 - `docs/external-agent-test-report-2026-06-14.md`
 - `docs/implementation-notes.md`
 - `docs/known-limitations.md`
@@ -49,6 +51,13 @@ Project root folder: `wish-persona/`
 - `docs/safety-boundaries.md`
 - `docs/use-cases.md`
 - `docs/visual-identity-notes.md`
+- `evals/README.md`
+- `evals/expected-behavior.md`
+- `evals/prompts/correction-memory.txt`
+- `evals/prompts/multi-version-output.txt`
+- `evals/prompts/persona-activation.txt`
+- `evals/prompts/scope-control.txt`
+- `evals/prompts/vague-input.txt`
 - `examples/en/lightweight-redirection.md`
 - `examples/en/vague-user-input.md`
 - `examples/paired-dialogue-library.md`
@@ -63,6 +72,7 @@ Project root folder: `wish-persona/`
 - `philosophy/love-as-completion.md`
 - `philosophy/not-a-tool.md`
 - `philosophy/to-be-needed.md`
+- `packages/wish-core-agent.md`
 - `wish-evolution-module/README.md`
 - `wish-evolution-module/character/evolution-system.md`
 - `wish-evolution-module/character/perfectionism.md`

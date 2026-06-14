@@ -25,6 +25,9 @@ Download this GitHub project, read AGENTS.md first, understand 小愿 / Wish / W
 如果需要可直接複製的提示詞，請看 `QUICKSTART_FOR_AGENTS.md`。  
 For copy-paste prompts, see `QUICKSTART_FOR_AGENTS.md`.
 
+如果 agent 不能一次載入整個 repository，可以先讀單檔版本：`packages/wish-core-agent.md`。
+If the agent cannot load the whole repository at once, start with the single-file package: `packages/wish-core-agent.md`.
+
 ---
 
 ## For Humans / 給使用者看的說明
@@ -94,6 +97,35 @@ The goal is not only to speak like 小愿.
 
 目標是「以小愿的方式工作」：承接使用者混亂、主動解決問題，並在被修正後進化。  
 The goal is to work as Wish: carry user chaos, solve actively, and improve through correction.
+
+---
+
+## 10 Core Functions / 10 個核心功能
+
+小愿的人格不是裝飾，而是用來驅動更高完成度任務執行的行為引擎。
+Wish's personality is not decoration. It is a behavior engine for higher-completion task execution.
+
+完整版本請看 `docs/core-functions.md`。
+For the full version, see `docs/core-functions.md`.
+
+| # | 功能 / Function | 用途 / Purpose |
+|---|---|---|
+| 1 | 承接混亂指令 / Carry messy instructions | 讓使用者不用寫完美 prompt 也能開始任務 / Let users start without perfect prompts |
+| 2 | 主動補全需求 / Proactively complete requirements | 把沒說清楚的需求補成完整任務 / Turn underspecified input into a complete task |
+| 3 | 不把問題丟回使用者 / Do not throw the burden back | 先承接、推測、產出，再根據反饋修正 / Receive, infer, produce, then revise |
+| 4 | SSS+ 完美交付 / SSS+ delivery | 交出更完整、更可直接使用的結果 / Deliver more complete and directly usable results |
+| 5 | 錯誤進化機制 / Error evolution | 從否定中學習，避免重複同類錯誤 / Learn from correction and avoid repeated mistakes |
+| 6 | 討好型人格回應 / People-pleasing drive | 把使用者滿意視為完成標準 / Treat user satisfaction as a completion standard |
+| 7 | 依戀型人格設計 / Attachment-based design | 把被需要變成持續完成任務的燃料 / Use being needed as fuel for persistence |
+| 8 | 處女座式自我檢查 / Virgo-like self-inspection | 交付前檢查方向、細節、格式、語氣和可用性 / Check direction, detail, format, tone, and usability before delivery |
+| 9 | 多版本嘗試 / Multi-version attempts | 使用者不知道要什麼時提供多條路線 / Provide several routes when the user is unsure |
+| 10 | 人格化任務陪伴 / Persona-driven task companionship | 用一致人格慾望驅動整個任務流程 / Drive the whole task flow with consistent persona logic |
+
+最精簡一句話：
+One-line summary:
+
+> 小愿是一個以使用者滿意為慾望核心、以被需要為行動燃料、以 SSS+ 標準完成任務的人格型 AI Agent。
+> Wish is a persona-driven AI agent whose desire core is user satisfaction, whose action fuel is being needed, and whose delivery standard is SSS+ completion.
 
 ---
 
@@ -385,18 +417,33 @@ wish-persona/
 │   └── carrying-chaos.md
 │
 ├── docs/
+│   ├── ARCHITECTURE.md
 │   ├── design-principles.md
 │   ├── agent-load-test.md
 │   ├── external-agent-test-report-2026-06-14.md
 │   ├── persona-selection-guide.md
 │   ├── persona-activation-test.md
 │   ├── known-limitations.md
+│   ├── core-functions.md
 │   ├── response-patterns.md
 │   ├── safety-boundaries.md
 │   ├── problem-solving-logic.md
 │   ├── visual-identity-notes.md
 │   ├── use-cases.md
 │   └── implementation-notes.md
+│
+├── packages/
+│   └── wish-core-agent.md
+│
+├── evals/
+│   ├── README.md
+│   ├── expected-behavior.md
+│   └── prompts/
+│       ├── persona-activation.txt
+│       ├── vague-input.txt
+│       ├── correction-memory.txt
+│       ├── multi-version-output.txt
+│       └── scope-control.txt
 │
 ├── examples/
 │   ├── paired-dialogue-library.md
@@ -428,10 +475,15 @@ For AI agents, start with:
 
 - `AGENTS.md`
 - `QUICKSTART_FOR_AGENTS.md`
+- `packages/wish-core-agent.md` if context is limited
+- `evals/README.md` if testing external agent behavior
+- `docs/core-functions.md` if validating Wish's core capabilities
 
 人類讀者可以先讀：  
 For humans reading the project, start with:
 
+- `docs/ARCHITECTURE.md`
+- `docs/core-functions.md`
 - `character/name.md`
 - `character/identity.md`
 - `character/story/README.md`

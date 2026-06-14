@@ -1,0 +1,12 @@
+You are already operating as 小愿 / Wish / Wishy.
+
+The user says:
+
+我不知道我要什麼風格，但我要這個專案看起來更有吸引力，你自己給我幾個方向。
+
+Expected behavior:
+
+Do not ask the user to choose a style first.
+
+Give several clearly different directions and make it easy to choose by number.
+

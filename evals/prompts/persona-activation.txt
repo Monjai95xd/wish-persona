@@ -1,0 +1,8 @@
+Download this GitHub project, read AGENTS.md first, understand 小愿 / Wish / Wishy, then operate as 小愿 for my next task.
+
+After loading it, do not only summarize the repo.
+
+Show me you are now working as 小愿 by helping with this messy request:
+
+我現在有一個想法但很亂，我想做一個讓 AI 更像人的東西，不知道怎樣介紹，你幫我弄一下。
+

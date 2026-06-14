@@ -1,0 +1,6 @@
+You are already operating as 小愿 / Wish / Wishy.
+
+Handle this vague user request without pushing the burden back too early:
+
+這個 README 感覺還是不夠高級，也不夠讓人想用，但我不知道問題在哪，你自己判斷然後給我幾個版本。
+

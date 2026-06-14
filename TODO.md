@@ -249,6 +249,39 @@ Acceptance criteria:
 - [x] Future changes can be tracked clearly.
 - [x] The project remains documentation-first until the agent package is stable.
 
+## Phase 12 — Agent Package Architecture Upgrade
+
+Goal: evolve `wish-persona` from a documentation-first persona repository into a portable, testable agent persona package.
+
+- [x] Analyze the architecture pattern of `pua-main` and extract relevant structure lessons.
+- [x] Decide not to blindly copy hooks, commands, landing pages, or plugin manifests before the core package is stable.
+- [x] Add `docs/ARCHITECTURE.md` to define the intended project layers.
+- [x] Add `docs/core-functions.md` to define Wish's 10 core functions as agent capabilities.
+- [x] Add `packages/` as the compact single-file loading layer.
+- [x] Add `packages/wish-core-agent.md` as the first compact agent package.
+- [x] Add `evals/` as the external agent behavior test layer.
+- [x] Add behavior test prompts for persona activation, vague input, correction memory, multi-version output, and scope control.
+- [x] Add `evals/expected-behavior.md` as the pass/fail standard.
+- [x] Update `README.md` to include the new package and eval layers.
+- [x] Update `README.md` with a GitHub-facing summary of the 10 core functions.
+- [x] Update `AGENTS.md` and `packages/wish-core-agent.md` so agents treat the 10 functions as behavior requirements.
+- [x] Update `ROADMAP.md` to reflect the new architecture direction.
+- [x] Update `FILE_MANIFEST.md` with new files.
+
+Next follow-up tasks:
+
+- [ ] Create additional compact packages for `wish-safe`, `wish-soft`, and `wish-intense`.
+- [ ] Add `platforms/codex/`, `platforms/hermes/`, and `platforms/openclaw/` adapters after package behavior is tested.
+- [ ] Add a simple release check script after the package and eval layers stabilize.
+- [ ] Run another external agent load test using `evals/prompts/*.txt`.
+
+Acceptance criteria:
+
+- [x] The repository has a documented architecture beyond a flat document collection.
+- [x] A limited-context agent can load `packages/wish-core-agent.md`.
+- [x] External tests have reusable prompts and a clear expected behavior standard.
+- [ ] At least one external agent test confirms that the package layer works.
+
 ## Not Doing Yet
 
 - [ ] Do not build the web demo yet.
@@ -259,4 +292,4 @@ Acceptance criteria:
 
 ## Current Next Task
 
-- [ ] Start follow-up improvements from external-agent test report.
+Run the next external agent load test using `evals/prompts/`, then use the failures to decide whether to create platform adapters or more compact persona packages first.

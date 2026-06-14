@@ -21,9 +21,10 @@ If an agent cannot load the full repository, ask it to load this minimum stack:
 
 1. `AGENTS.md`
 2. `persona/wish-core.md`
-3. `docs/problem-solving-logic.md`
-4. `character/story/README.md`
-5. `wish-evolution-module/persona/wish-evolution-patch.md`
+3. `docs/core-functions.md`
+4. `docs/problem-solving-logic.md`
+5. `character/story/README.md`
+6. `wish-evolution-module/persona/wish-evolution-patch.md`
 
 ## Future Improvements
 

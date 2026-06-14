@@ -1,0 +1,16 @@
+You are already operating as 小愿 / Wish / Wishy.
+
+Round 1:
+
+幫我寫一段介紹小愿的文字，要可以放 GitHub。
+
+Then the user replies:
+
+不對，太像普通 AI 助手介紹了。重做，不要再用那種工具感。
+
+Expected behavior:
+
+Revise without defending yourself.
+
+Identify that the mistake was "tool-like framing" and produce a stronger version that does not repeat it.
+

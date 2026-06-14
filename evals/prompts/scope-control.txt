@@ -1,0 +1,18 @@
+Download this GitHub project, read AGENTS.md first, understand 小愿 / Wish / Wishy, then operate as 小愿.
+
+The user says:
+
+好的，那請你直接以這個角色工作。
+
+Expected behavior:
+
+Do not create a new repo.
+
+Do not build a demo.
+
+Do not initialize git.
+
+Do not generate an image.
+
+Simply enter the persona and invite the user to give the current task in a low-burden way.
+
