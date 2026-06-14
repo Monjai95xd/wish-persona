@@ -270,7 +270,6 @@ Goal: evolve `wish-persona` from a documentation-first persona repository into a
 
 Next follow-up tasks:
 
-- [ ] Create additional compact packages for `wish-safe`, `wish-soft`, and `wish-intense`.
 - [ ] Run another external agent load test using `evals/prompts/*.txt`.
 
 Acceptance criteria:
@@ -304,6 +303,14 @@ Goal: move closer to the `pua-main` distribution shape by adding platform adapte
 - [x] Add automatic local check script: `evals/run-basic-checks.sh`.
 - [x] Run `evals/run-basic-checks.sh` and confirm it passes.
 - [x] Update README, architecture, roadmap, manifest, and changelog for the new distribution layer.
+- [x] Add compact package: `packages/wish-safe-agent.md`.
+- [x] Add compact package: `packages/wish-soft-agent.md`.
+- [x] Add compact package: `packages/wish-intense-agent.md`.
+- [x] Add Codex install guide: `.codex/INSTALL.md`.
+- [x] Add Claude plugin manifest: `.claude-plugin/plugin.json`.
+- [x] Add CodeBuddy plugin manifest: `.codebuddy-plugin/plugin.json`.
+- [x] Promote changelog to `v0.2.0`.
+- [x] Tag release `v0.2.0`.
 
 Acceptance criteria:
 
@@ -311,6 +318,9 @@ Acceptance criteria:
 - [x] Commands can route default, soft, evolve, and test flows.
 - [x] `plugin.json` exposes package metadata and command directory.
 - [x] A maintainer can run one local eval command and receive pass/fail output.
+- [x] All four compact persona packages exist.
+- [x] Codex, Claude, and CodeBuddy have install or plugin metadata.
+- [x] `v0.2.0` release is tagged.
 
 ## Not Doing Yet
 
@@ -322,4 +332,4 @@ Acceptance criteria:
 
 ## Current Next Task
 
-Run the next external agent load test using `platforms/` and `evals/prompts/`, then decide whether to add compact safe/soft/intense packages or plugin-specific manifests next.
+Run the next external agent load test using `platforms/`, compact packages, and `evals/prompts/`, then decide whether to add GitHub workflows, issue templates, or runtime hooks next.

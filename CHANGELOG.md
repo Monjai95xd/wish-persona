@@ -1,16 +1,20 @@
 # Changelog
 
-## Unreleased
+## v0.2.0
+
+Second public agent-package release.
 
 ### Added
 
 - Added `docs/ARCHITECTURE.md` to define the package architecture after reviewing a stronger multi-platform agent repository pattern.
 - Added `docs/core-functions.md` with the 10 core functions of Wish / 小愿 as agent capabilities.
 - Added `packages/wish-core-agent.md` as the first compact single-file loading package for limited-context agents.
+- Added compact persona packages for safe, soft, and intense variants.
 - Added `evals/` with repeatable external agent behavior tests and expected pass/fail standards.
 - Added `platforms/` adapters for Codex, Hermes, OpenClaw, Claude, Cursor, VS Code, CodeBuddy, Kimi, Trae, and generic agents.
 - Added `commands/` with default, soft, evolve, and test command adapters.
 - Added `plugin.json` package metadata.
+- Added `.codex/INSTALL.md`, `.claude-plugin/plugin.json`, and `.codebuddy-plugin/plugin.json`.
 - Added `evals/run-basic-checks.sh` for local structural validation.
 
 ### Changed

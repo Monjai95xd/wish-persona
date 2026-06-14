@@ -75,7 +75,11 @@
 - [x] Add command adapters for default, soft, evolve, and test flows
 - [x] Add `plugin.json` package metadata
 - [x] Add `evals/run-basic-checks.sh` for local structural checks
-- [ ] Add compact packages for safe, soft, and intense variants
+- [x] Add compact packages for safe, soft, and intense variants
+- [x] Add `.codex/INSTALL.md`
+- [x] Add `.claude-plugin/plugin.json`
+- [x] Add `.codebuddy-plugin/plugin.json`
+- [x] Tag `v0.2.0`
 - [ ] Run another external agent load test using `evals/prompts/`
 
 ## Phase 8 — Future Web Demo

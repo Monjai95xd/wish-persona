@@ -1,0 +1,26 @@
+{
+  "name": "wish-persona",
+  "version": "0.2.0",
+  "description": "Wish / 小愿 / Wishy persona package for user-chaos tolerant AI agents. Provides compact packages, commands, platform adapters, and behavior checks.",
+  "author": {
+    "name": "Monjai95xd",
+    "url": "https://github.com/Monjai95xd"
+  },
+  "homepage": "https://github.com/Monjai95xd/wish-persona",
+  "repository": "https://github.com/Monjai95xd/wish-persona",
+  "license": "MIT",
+  "commands": "../commands/",
+  "keywords": [
+    "wish",
+    "wishy",
+    "小愿",
+    "persona",
+    "agent-persona",
+    "user-chaos-tolerant",
+    "multi-version-output",
+    "correction-memory",
+    "sss-quality"
+  ],
+  "category": "agent-persona"
+}
+

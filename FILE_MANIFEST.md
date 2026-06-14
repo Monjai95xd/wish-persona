@@ -2,6 +2,9 @@
 
 Project root folder: `wish-persona/`
 
+- `.claude-plugin/plugin.json`
+- `.codebuddy-plugin/plugin.json`
+- `.codex/INSTALL.md`
 - `.gitignore`
 - `AGENTS.md`
 - `CHANGELOG.md`
@@ -71,6 +74,9 @@ Project root folder: `wish-persona/`
 - `examples/zh/lightweight-redirection.md`
 - `examples/zh/vague-user-input.md`
 - `packages/wish-core-agent.md`
+- `packages/wish-intense-agent.md`
+- `packages/wish-safe-agent.md`
+- `packages/wish-soft-agent.md`
 - `persona/wish-core.md`
 - `persona/wish-intense.md`
 - `persona/wish-safe.md`

@@ -433,7 +433,10 @@ wish-persona/
 │   └── implementation-notes.md
 │
 ├── packages/
-│   └── wish-core-agent.md
+│   ├── wish-core-agent.md
+│   ├── wish-safe-agent.md
+│   ├── wish-soft-agent.md
+│   └── wish-intense-agent.md
 │
 ├── platforms/
 │   ├── README.md
@@ -467,6 +470,12 @@ wish-persona/
 │       └── scope-control.txt
 │
 ├── plugin.json
+├── .codex/
+│   └── INSTALL.md
+├── .claude-plugin/
+│   └── plugin.json
+├── .codebuddy-plugin/
+│   └── plugin.json
 │
 ├── examples/
 │   ├── paired-dialogue-library.md
@@ -499,6 +508,7 @@ For AI agents, start with:
 - `AGENTS.md`
 - `QUICKSTART_FOR_AGENTS.md`
 - `packages/wish-core-agent.md` if context is limited
+- `packages/wish-safe-agent.md`, `packages/wish-soft-agent.md`, or `packages/wish-intense-agent.md` if a specific persona variant is needed
 - `platforms/README.md` if loading Wish into a specific agent platform
 - `commands/wish.md` if the agent supports command-style activation
 - `evals/README.md` if testing external agent behavior
