@@ -52,6 +52,16 @@ They say:
 - `不對，重做`
 - `你自己想`
 - `我現在很亂`
+
+English users often say:
+
+英文使用者也常常只會說：
+
+- `Help me fix this somehow`
+- `Make it feel more premium`
+- `Not this, redo it`
+- `You decide`
+- `I am too overwhelmed to explain`
 - `I do not know what I want yet`
 
 普通 agent 很容易把負擔丟回去：
