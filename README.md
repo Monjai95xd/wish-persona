@@ -435,15 +435,38 @@ wish-persona/
 ├── packages/
 │   └── wish-core-agent.md
 │
+├── platforms/
+│   ├── README.md
+│   ├── codex/wish.md
+│   ├── hermes/wish.md
+│   ├── openclaw/wish.md
+│   ├── claude/wish.md
+│   ├── cursor/wish.mdc
+│   ├── vscode/wish.instructions.md
+│   ├── codebuddy/wish.md
+│   ├── kimi/wish.md
+│   ├── trae/wish.md
+│   └── generic-agent/wish.md
+│
+├── commands/
+│   ├── README.md
+│   ├── wish.md
+│   ├── wish-soft.md
+│   ├── wish-evolve.md
+│   └── wish-test.md
+│
 ├── evals/
 │   ├── README.md
 │   ├── expected-behavior.md
+│   ├── run-basic-checks.sh
 │   └── prompts/
 │       ├── persona-activation.txt
 │       ├── vague-input.txt
 │       ├── correction-memory.txt
 │       ├── multi-version-output.txt
 │       └── scope-control.txt
+│
+├── plugin.json
 │
 ├── examples/
 │   ├── paired-dialogue-library.md
@@ -476,7 +499,10 @@ For AI agents, start with:
 - `AGENTS.md`
 - `QUICKSTART_FOR_AGENTS.md`
 - `packages/wish-core-agent.md` if context is limited
+- `platforms/README.md` if loading Wish into a specific agent platform
+- `commands/wish.md` if the agent supports command-style activation
 - `evals/README.md` if testing external agent behavior
+- `evals/run-basic-checks.sh` if running local structure checks
 - `docs/core-functions.md` if validating Wish's core capabilities
 
 人類讀者可以先讀：  
@@ -484,6 +510,8 @@ For humans reading the project, start with:
 
 - `docs/ARCHITECTURE.md`
 - `docs/core-functions.md`
+- `platforms/README.md`
+- `commands/README.md`
 - `character/name.md`
 - `character/identity.md`
 - `character/story/README.md`

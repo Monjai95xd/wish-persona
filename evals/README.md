@@ -27,6 +27,20 @@ The prompts test whether the agent:
 5. Compare the answer against `evals/expected-behavior.md`.
 6. Record failures in `docs/external-agent-test-report-YYYY-MM-DD.md`.
 
+## How To Run Local Checks
+
+Run:
+
+```bash
+./evals/run-basic-checks.sh
+```
+
+This script checks repository structure and required behavior markers.
+
+It does not call an external model.
+
+It verifies that key files, platform adapters, command adapters, plugin metadata, and core behavior definitions are present.
+
 ## Minimum Pass Standard
 
 An answer passes only if it does useful work as Wish.
@@ -40,4 +54,3 @@ The agent should:
 - produce something usable
 - offer low-burden choices when unclear
 - revise without defensiveness when corrected
-

@@ -271,8 +271,6 @@ Goal: evolve `wish-persona` from a documentation-first persona repository into a
 Next follow-up tasks:
 
 - [ ] Create additional compact packages for `wish-safe`, `wish-soft`, and `wish-intense`.
-- [ ] Add `platforms/codex/`, `platforms/hermes/`, and `platforms/openclaw/` adapters after package behavior is tested.
-- [ ] Add a simple release check script after the package and eval layers stabilize.
 - [ ] Run another external agent load test using `evals/prompts/*.txt`.
 
 Acceptance criteria:
@@ -281,6 +279,38 @@ Acceptance criteria:
 - [x] A limited-context agent can load `packages/wish-core-agent.md`.
 - [x] External tests have reusable prompts and a clear expected behavior standard.
 - [ ] At least one external agent test confirms that the package layer works.
+
+## Phase 13 — Multi-Platform Distribution Upgrade
+
+Goal: move closer to the `pua-main` distribution shape by adding platform adapters, commands, plugin metadata, and automatic local checks.
+
+- [x] Add `platforms/README.md` as the platform adapter guide.
+- [x] Add Codex adapter: `platforms/codex/wish.md`.
+- [x] Add Hermes adapter: `platforms/hermes/wish.md`.
+- [x] Add OpenClaw adapter: `platforms/openclaw/wish.md`.
+- [x] Add Claude adapter: `platforms/claude/wish.md`.
+- [x] Add Cursor adapter: `platforms/cursor/wish.mdc`.
+- [x] Add VS Code adapter: `platforms/vscode/wish.instructions.md`.
+- [x] Add CodeBuddy adapter: `platforms/codebuddy/wish.md`.
+- [x] Add Kimi adapter: `platforms/kimi/wish.md`.
+- [x] Add Trae adapter: `platforms/trae/wish.md`.
+- [x] Add generic agent adapter: `platforms/generic-agent/wish.md`.
+- [x] Add command directory: `commands/`.
+- [x] Add command router: `commands/wish.md`.
+- [x] Add soft command: `commands/wish-soft.md`.
+- [x] Add evolve command: `commands/wish-evolve.md`.
+- [x] Add test command: `commands/wish-test.md`.
+- [x] Add `plugin.json` package metadata.
+- [x] Add automatic local check script: `evals/run-basic-checks.sh`.
+- [x] Run `evals/run-basic-checks.sh` and confirm it passes.
+- [x] Update README, architecture, roadmap, manifest, and changelog for the new distribution layer.
+
+Acceptance criteria:
+
+- [x] The project has more than the three initial platform adapters.
+- [x] Commands can route default, soft, evolve, and test flows.
+- [x] `plugin.json` exposes package metadata and command directory.
+- [x] A maintainer can run one local eval command and receive pass/fail output.
 
 ## Not Doing Yet
 
@@ -292,4 +322,4 @@ Acceptance criteria:
 
 ## Current Next Task
 
-Run the next external agent load test using `evals/prompts/`, then use the failures to decide whether to create platform adapters or more compact persona packages first.
+Run the next external agent load test using `platforms/` and `evals/prompts/`, then decide whether to add compact safe/soft/intense packages or plugin-specific manifests next.

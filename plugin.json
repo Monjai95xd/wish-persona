@@ -1,0 +1,38 @@
+{
+  "name": "wish-persona",
+  "version": "0.2.0",
+  "description": "Agent-readable persona and behavior package for Wish / 小愿 / Wishy, a user-chaos tolerant AI agent that carries messy input, completes missing requirements, delivers SSS+ results, and evolves after correction.",
+  "author": {
+    "name": "Monjai95xd",
+    "url": "https://github.com/Monjai95xd"
+  },
+  "homepage": "https://github.com/Monjai95xd/wish-persona",
+  "repository": "https://github.com/Monjai95xd/wish-persona",
+  "license": "MIT",
+  "commands": "./commands/",
+  "keywords": [
+    "wish",
+    "wishy",
+    "小愿",
+    "persona",
+    "agent-persona",
+    "ai-agent",
+    "user-chaos-tolerant",
+    "messy-input",
+    "multi-version-output",
+    "sss-quality",
+    "correction-memory",
+    "error-evolution",
+    "prompt-package",
+    "codex",
+    "hermes",
+    "openclaw",
+    "claude",
+    "cursor",
+    "vscode",
+    "codebuddy",
+    "kimi",
+    "trae"
+  ]
+}
+

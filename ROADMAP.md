@@ -71,8 +71,11 @@
 - [x] Add `packages/wish-core-agent.md`
 - [x] Add `evals/` as repeatable external agent behavior tests
 - [x] Add expected behavior pass/fail standard
+- [x] Add multi-platform adapters for Codex, Hermes, OpenClaw, Claude, Cursor, VS Code, CodeBuddy, Kimi, Trae, and generic agents
+- [x] Add command adapters for default, soft, evolve, and test flows
+- [x] Add `plugin.json` package metadata
+- [x] Add `evals/run-basic-checks.sh` for local structural checks
 - [ ] Add compact packages for safe, soft, and intense variants
-- [ ] Add platform adapters for Codex, Hermes, and OpenClaw
 - [ ] Run another external agent load test using `evals/prompts/`
 
 ## Phase 8 — Future Web Demo

@@ -8,12 +8,16 @@
 - Added `docs/core-functions.md` with the 10 core functions of Wish / 小愿 as agent capabilities.
 - Added `packages/wish-core-agent.md` as the first compact single-file loading package for limited-context agents.
 - Added `evals/` with repeatable external agent behavior tests and expected pass/fail standards.
+- Added `platforms/` adapters for Codex, Hermes, OpenClaw, Claude, Cursor, VS Code, CodeBuddy, Kimi, Trae, and generic agents.
+- Added `commands/` with default, soft, evolve, and test command adapters.
+- Added `plugin.json` package metadata.
+- Added `evals/run-basic-checks.sh` for local structural validation.
 
 ### Changed
 
 - Updated `README.md` with a GitHub-facing 10 core functions summary.
 - Updated `AGENTS.md` and `packages/wish-core-agent.md` so agents treat the 10 functions as behavior requirements.
-- Updated `ROADMAP.md`, `TODO.md`, and `FILE_MANIFEST.md` to reflect the new package, evaluation, and core function layers.
+- Updated `README.md`, `docs/ARCHITECTURE.md`, `ROADMAP.md`, `TODO.md`, and `FILE_MANIFEST.md` to reflect the new package, evaluation, core function, platform, command, and plugin layers.
 
 ## v0.1.0
 

@@ -28,6 +28,10 @@ That means the repository should support three levels of use:
    - A future platform-specific file adapts Wish to Codex, Hermes, OpenClaw, Cursor, Claude, or other systems.
    - Platform adapters should reuse the package layer instead of rewriting the character from zero.
 
+4. **Command load**
+   - The agent uses `commands/` to activate a specific Wish mode.
+   - Commands should route behavior, not redefine the persona from scratch.
+
 ## Architecture Layers
 
 ### 1. Entry Layer
@@ -131,9 +135,9 @@ Purpose:
 
 The evaluation layer is what turns "I think the repo works" into "we tested the repo behavior."
 
-### 7. Future Platform Adapter Layer
+### 7. Platform Adapter Layer
 
-Future folder:
+Primary folder:
 
 - `platforms/`
 
@@ -142,9 +146,34 @@ Purpose:
 - provide platform-specific loading instructions
 - adapt Wish for Codex skills, Hermes workflows, OpenClaw instructions, Cursor rules, Claude plugins, and similar environments
 
-Do not build this layer before the package and evaluation layers are stable.
+The first adapter set supports Codex, Hermes, OpenClaw, Claude, Cursor, VS Code, CodeBuddy, Kimi, Trae, and generic agents.
 
-### 8. Future Demo Layer
+### 8. Command Layer
+
+Primary folder:
+
+- `commands/`
+
+Purpose:
+
+- provide slash-command style activation for agent environments that support command files
+- route between default Wish, soft mode, evolution mode, and quick behavior tests
+
+Commands should point back to `AGENTS.md`, `packages/wish-core-agent.md`, `docs/core-functions.md`, and the evolution module.
+
+### 9. Plugin Metadata Layer
+
+Primary file:
+
+- `plugin.json`
+
+Purpose:
+
+- give the repository a package-like metadata shape
+- expose command directory location
+- support future installation or indexing workflows
+
+### 10. Future Demo Layer
 
 Current folder:
 
@@ -180,23 +209,17 @@ wish-persona/
 ├── packages/
 │   └── wish-core-agent.md
 │
+├── platforms/
+├── commands/
+├── plugin.json
+│
 ├── evals/
 │   ├── README.md
 │   ├── expected-behavior.md
+│   ├── run-basic-checks.sh
 │   └── prompts/
 │
 └── demo/
-```
-
-Future expansion can add:
-
-```text
-platforms/
-├── codex/
-├── hermes/
-├── openclaw/
-├── cursor/
-└── generic-agent/
 ```
 
 ## What Not To Copy Blindly
@@ -211,7 +234,8 @@ For `wish-persona`, the priority is:
 2. single-file loading
 3. repeatable external tests
 4. platform adapters
-5. public demo or landing page
+5. command and plugin metadata
+6. public demo or landing page
 
 ## Success Criteria
 
@@ -220,5 +244,6 @@ This architecture is working when:
 - a new agent can load Wish from `AGENTS.md`
 - a limited-context agent can load Wish from `packages/wish-core-agent.md`
 - an external tester can run `evals/prompts/*.txt`
+- a local maintainer can run `evals/run-basic-checks.sh`
 - failures are recorded and converted into evolution rules
 - platform adapters can be created without rewriting the whole persona
