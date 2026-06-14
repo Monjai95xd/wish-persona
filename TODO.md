@@ -162,6 +162,7 @@ Goal: make the GitHub repo clear and trustworthy when opened in a browser.
 - [x] Add the recommended copy-paste instruction.
 - [x] Ensure the README does not become too long for practical use.
 - [x] Keep the emotional identity visible without hiding the usage flow.
+- [x] Convert `README.md` into paragraph-level Chinese / English bilingual documentation.
 
 Acceptance criteria:
 
