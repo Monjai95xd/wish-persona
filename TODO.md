@@ -230,7 +230,7 @@ Acceptance criteria:
 Goal: make the first public version easy to identify and improve later.
 
 - [x] Add a `CHANGELOG.md`.
-- [ ] Add version label `v0.1.0` after first GitHub upload.
+- [x] Add version label `v0.1.0` after first GitHub upload.
 - [x] Update `ROADMAP.md` to match the new agent-package direction.
 - [x] Add known limitations.
 - [x] Add future ideas for web demo only after the persona package is stable.
@@ -238,8 +238,8 @@ Goal: make the first public version easy to identify and improve later.
 Acceptance criteria:
 
 - [x] Users can tell what version they are using.
-- [ ] Future changes can be tracked clearly.
-- [ ] The project remains documentation-first until the agent package is stable.
+- [x] Future changes can be tracked clearly.
+- [x] The project remains documentation-first until the agent package is stable.
 
 ## Not Doing Yet
 
@@ -251,4 +251,4 @@ Acceptance criteria:
 
 ## Current Next Task
 
-- [ ] Start Phase 9 by creating or connecting the GitHub repository.
+- [!] Run real external-agent load test in OpenClaw or Hermes Agent.
