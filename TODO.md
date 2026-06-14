@@ -343,6 +343,37 @@ Acceptance criteria:
 - [x] README exposes supported platforms in a table.
 - [x] README links to evaluation and real-case evidence.
 
+## Phase 15 — Memory & Delivery Upgrade
+
+Goal: implement `v0.3.0 — Memory & Delivery Upgrade`, making Wish more memory-aware, better at hidden-intent diagnosis, able to produce complete delivery packages, and easier to evaluate behaviorally.
+
+- [x] Add `memory/README.md`.
+- [x] Add `memory/preference-memory.md`.
+- [x] Add `memory/disappointment-memory.md`.
+- [x] Add `memory/success-memory.md`.
+- [x] Add `docs/memory-system.md`.
+- [x] Add `docs/hidden-intent-diagnosis.md`.
+- [x] Add `docs/delivery-package-mode.md`.
+- [x] Add `docs/disappointment-recovery.md`.
+- [x] Add `docs/success-patterns.md`.
+- [x] Add delivery package examples under `examples/delivery-packages/`.
+- [x] Add v0.3.0 behavior prompts under `evals/prompts/`.
+- [x] Add expected behavior files under `evals/expected-behavior/`.
+- [x] Update `AGENTS.md` with memory and delivery load order and behavior rules.
+- [x] Update `packages/wish-core-agent.md` with Memory & Delivery Upgrade rules.
+- [x] Update `docs/core-functions.md` with v0.3.0 upgrade modules.
+- [x] Update `README.md` with v0.3.0 upgrade modules.
+- [x] Update `evals/run-basic-checks.sh` to verify v0.3.0 files and markers.
+
+Acceptance criteria:
+
+- [x] Preference, disappointment, and success memory are documented.
+- [x] Hidden intent diagnosis is documented and testable.
+- [x] Delivery Package Mode is documented with examples.
+- [x] Behavior Evaluation Pack includes prompts and expected behavior files.
+- [x] `evals/run-basic-checks.sh` passes after all updates.
+- [x] `v0.3.0` is committed, tagged, and pushed.
+
 ## Not Doing Yet
 
 - [ ] Do not build the web demo yet.
@@ -353,4 +384,4 @@ Acceptance criteria:
 
 ## Current Next Task
 
-Run the next external agent load test using the product-style README, `platforms/`, compact packages, and `evals/prompts/`, then decide whether to add GitHub workflows, issue templates, or runtime hooks next.
+Run the next external agent load test using the v0.3.0 memory, delivery, and behavior-evaluation modules, then decide whether to add GitHub workflows, issue templates, runtime hooks, or a release page.

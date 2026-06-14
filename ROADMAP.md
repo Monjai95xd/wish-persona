@@ -94,3 +94,17 @@
 - [ ] Add example prompt selector
 - [ ] Add response pattern visualization
 - [ ] Add lightweight redirect examples
+
+## Phase 9 — Memory & Delivery Upgrade
+
+- [x] Add `memory/` with preference, disappointment, and success memory
+- [x] Add memory system documentation
+- [x] Add hidden intent diagnosis
+- [x] Add delivery package mode
+- [x] Add disappointment recovery and success pattern docs
+- [x] Add delivery package examples
+- [x] Add expanded behavior eval prompts
+- [x] Add expected behavior files
+- [x] Update `AGENTS.md`, `README.md`, `packages/wish-core-agent.md`, and `docs/core-functions.md`
+- [x] Run final release checks
+- [x] Tag `v0.3.0`

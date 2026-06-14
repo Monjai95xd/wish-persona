@@ -1,6 +1,6 @@
 {
   "name": "wish-persona",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Wish / 小愿 / Wishy persona package for CodeBuddy and other coding agents. Helps agents carry messy user input, complete missing requirements, produce multiple versions, and evolve after correction.",
   "author": {
     "name": "Monjai95xd",
@@ -23,4 +23,3 @@
   ],
   "category": "agent-persona"
 }
-

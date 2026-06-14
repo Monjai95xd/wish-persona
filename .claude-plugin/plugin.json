@@ -1,6 +1,6 @@
 {
   "name": "wish-persona",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Wish / 小愿 / Wishy persona package for user-chaos tolerant AI agents. Provides compact packages, commands, platform adapters, and behavior checks.",
   "author": {
     "name": "Monjai95xd",
@@ -23,4 +23,3 @@
   ],
   "category": "agent-persona"
 }
-

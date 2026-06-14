@@ -1,17 +1,25 @@
 # Changelog
 
-## Unreleased
+## v0.3.0
+
+Memory & Delivery Upgrade.
 
 ### Added
 
 - Added `assets/wish-hero.svg` as a simple GitHub README hero visual placeholder.
 - Added `docs/real-case-agent-load-test.md` as a formal case study for the first external agent load test.
+- Added `memory/` with preference, disappointment, and success memory.
+- Added `docs/memory-system.md`, `docs/hidden-intent-diagnosis.md`, `docs/delivery-package-mode.md`, `docs/disappointment-recovery.md`, and `docs/success-patterns.md`.
+- Added delivery package examples under `examples/delivery-packages/`.
+- Added expanded behavior evaluation prompts and expected behavior files for memory, hidden intent, delivery package mode, and persona behavior consistency.
 
 ### Changed
 
 - Reworked the README first screen into a product-style presentation.
 - Added README sections for the problem, how Wish works, platform matrix, and evaluation.
-- Updated `evals/run-basic-checks.sh` to verify the new README sections and case study.
+- Added README section for `v0.3.0 — Memory & Delivery Upgrade`.
+- Updated `AGENTS.md`, `packages/wish-core-agent.md`, and `docs/core-functions.md` with memory and delivery behavior rules.
+- Updated `evals/run-basic-checks.sh` to verify the new README sections, case study, memory modules, and delivery modules.
 
 ## v0.2.0
 

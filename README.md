@@ -5,10 +5,10 @@
 **User-chaos tolerant persona framework for AI agents.**
 **能承接使用者混亂輸入、補全需求、反覆修正、交出 SSS+ 結果的人格型 AI Agent 框架。**
 
-[![Version](https://img.shields.io/badge/version-v0.2.0-7CDAA5)](https://github.com/Monjai95xd/wish-persona/releases/tag/v0.2.0)
+[![Version](https://img.shields.io/badge/version-v0.3.0-7CDAA5)](https://github.com/Monjai95xd/wish-persona/releases/tag/v0.3.0)
 [![Persona](https://img.shields.io/badge/persona-Wish%20%2F%20%E5%B0%8F%E6%84%BF-F4D06F)](#name-canon--名字設定)
 [![Platforms](https://img.shields.io/badge/platforms-Codex%20%7C%20Hermes%20%7C%20OpenClaw%20%7C%20Claude%20%7C%20Cursor-8AB4F8)](#platform-matrix--平台矩陣)
-[![Checks](https://img.shields.io/badge/checks-55%2F55%20passing-7CDAA5)](#evaluation--測試)
+[![Checks](https://img.shields.io/badge/checks-89%2F89%20passing-7CDAA5)](#evaluation--測試)
 
 `wish-persona` is an agent-readable persona and behavior package. It helps AI agents operate as **小愿 / Wish / Wishy**: a persona-driven executor that carries messy user input, infers intent, completes missing requirements, produces multiple versions, and improves after correction.
 
@@ -106,6 +106,9 @@ The core package combines:
 核心套件包含：
 
 - identity and story memory / 身份與故事記憶: `character/`, `character/story/`
+- memory system / 記憶系統: `memory/`, `docs/memory-system.md`
+- hidden intent diagnosis / 隱藏意圖診斷: `docs/hidden-intent-diagnosis.md`
+- delivery package mode / 任務包交付模式: `docs/delivery-package-mode.md`
 - execution logic / 執行邏輯: `docs/problem-solving-logic.md`
 - 10 capabilities / 10 個核心能力: `docs/core-functions.md`
 - compact loading packages / 單檔載入包: `packages/`
@@ -165,9 +168,9 @@ Current local check result:
 目前本地檢查結果：
 
 ```text
-Passed: 55
+Passed: 89
 Failed: 0
-Total:  55
+Total:  89
 ```
 
 Manual behavior prompts live in `evals/prompts/`:
@@ -179,6 +182,12 @@ Manual behavior prompts live in `evals/prompts/`:
 - correction memory / 修正記憶
 - multi-version output / 多版本輸出
 - scope control / 範圍控制
+- preference memory / 使用者偏好記憶
+- disappointment memory / 失望記憶
+- success memory / 成功記憶
+- hidden intent diagnosis / 隱藏意圖診斷
+- delivery package mode / 任務包交付模式
+- persona behavior consistency / 人格行為一致性
 
 Real case study:
 
@@ -218,6 +227,37 @@ One-line summary:
 
 > 小愿是一個以使用者滿意為慾望核心、以被需要為行動燃料、以 SSS+ 標準完成任務的人格型 AI Agent。
 > Wish is a persona-driven AI agent whose desire core is user satisfaction, whose action fuel is being needed, and whose delivery standard is SSS+ completion.
+
+---
+
+## v0.3.0 Upgrade Modules / v0.3.0 升級模組
+
+`v0.3.0 — Memory & Delivery Upgrade` makes Wish more than a persona-driven executor. It adds memory-oriented behavior, hidden intent diagnosis, delivery package mode, and expanded behavior evaluations.
+
+`v0.3.0 — Memory & Delivery Upgrade` 讓小愿不只是一個人格驅動的執行者，而是開始具備記憶型行為、隱藏意圖診斷、任務包交付模式與更完整的行為測試。
+
+| Module / 模組 | File / 檔案 | Purpose / 用途 |
+|---|---|---|
+| Preference Memory / 使用者偏好記憶 | `memory/preference-memory.md` | Remember preferred style, tone, format, naming, and delivery / 記住使用者偏好的風格、語氣、格式、命名與交付方式 |
+| Disappointment Memory / 失望記憶 | `memory/disappointment-memory.md` | Convert disappointing mistake patterns into pre-delivery checks / 把曾經讓使用者失望的錯誤類型變成交付前檢查 |
+| Success Memory / 成功記憶 | `memory/success-memory.md` | Reuse delivery patterns that worked well before / 沿用曾經有效的交付模式 |
+| Hidden Intent Diagnosis / 隱藏意圖診斷 | `docs/hidden-intent-diagnosis.md` | Infer the real outcome behind surface-level instructions / 推理表面指令背後真正想達成的結果 |
+| Delivery Package Mode / 任務包交付模式 | `docs/delivery-package-mode.md` | Turn single requests into complete usable packages when useful / 必要時把單點需求升級成完整可用任務包 |
+| Behavior Evaluation Pack / 行為測試包 | `evals/prompts/`, `evals/expected-behavior/` | Test whether agents actually behave like Wish / 測試 agent 是否真的以小愿方式運作 |
+
+Memory and delivery loop:
+
+記憶與交付閉環：
+
+```text
+User task / 使用者任務
+  -> Hidden Intent Diagnosis / 隱藏意圖診斷
+  -> Preference Memory / 使用者偏好記憶
+  -> Disappointment Memory / 失望記憶
+  -> Success Memory / 成功記憶
+  -> Delivery Package Mode / 任務包交付模式
+  -> Behavior Evaluation Pack / 行為測試包
+```
 
 ---
 
@@ -514,6 +554,11 @@ wish-persona/
 │   ├── agent-load-test.md
 │   ├── external-agent-test-report-2026-06-14.md
 │   ├── real-case-agent-load-test.md
+│   ├── memory-system.md
+│   ├── hidden-intent-diagnosis.md
+│   ├── delivery-package-mode.md
+│   ├── disappointment-recovery.md
+│   ├── success-patterns.md
 │   ├── persona-selection-guide.md
 │   ├── persona-activation-test.md
 │   ├── known-limitations.md
@@ -524,6 +569,12 @@ wish-persona/
 │   ├── visual-identity-notes.md
 │   ├── use-cases.md
 │   └── implementation-notes.md
+│
+├── memory/
+│   ├── README.md
+│   ├── preference-memory.md
+│   ├── disappointment-memory.md
+│   └── success-memory.md
 │
 ├── packages/
 │   ├── wish-core-agent.md
@@ -554,13 +605,20 @@ wish-persona/
 ├── evals/
 │   ├── README.md
 │   ├── expected-behavior.md
+│   ├── expected-behavior/
 │   ├── run-basic-checks.sh
 │   └── prompts/
 │       ├── persona-activation.txt
 │       ├── vague-input.txt
 │       ├── correction-memory.txt
 │       ├── multi-version-output.txt
-│       └── scope-control.txt
+│       ├── scope-control.txt
+│       ├── preference-memory.md
+│       ├── disappointment-memory.md
+│       ├── success-memory.md
+│       ├── hidden-intent-diagnosis.md
+│       ├── delivery-package-mode.md
+│       └── persona-behavior-consistency.md
 │
 ├── plugin.json
 ├── .codex/
@@ -573,6 +631,7 @@ wish-persona/
 ├── examples/
 │   ├── paired-dialogue-library.md
 │   ├── problem-solving-scenarios.md
+│   ├── delivery-packages/
 │   ├── zh/
 │   └── en/
 │
@@ -604,6 +663,8 @@ For AI agents, start with:
 - `AGENTS.md`
 - `QUICKSTART_FOR_AGENTS.md`
 - `packages/wish-core-agent.md` if context is limited
+- `memory/README.md` if validating memory-oriented behavior
+- `docs/hidden-intent-diagnosis.md` and `docs/delivery-package-mode.md` for v0.3.0 behavior
 - `packages/wish-safe-agent.md`, `packages/wish-soft-agent.md`, or `packages/wish-intense-agent.md` if a specific persona variant is needed
 - `platforms/README.md` if loading Wish into a specific agent platform
 - `commands/wish.md` if the agent supports command-style activation
@@ -616,6 +677,11 @@ For humans reading the project, start with:
 
 - `docs/ARCHITECTURE.md`
 - `docs/core-functions.md`
+- `docs/memory-system.md`
+- `docs/hidden-intent-diagnosis.md`
+- `docs/delivery-package-mode.md`
+- `memory/README.md`
+- `examples/delivery-packages/README.md`
 - `platforms/README.md`
 - `commands/README.md`
 - `character/name.md`
