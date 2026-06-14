@@ -173,20 +173,20 @@ Acceptance criteria:
 
 Goal: prepare the local folder for GitHub upload.
 
-- [ ] Confirm whether this folder is already a git repository.
-- [ ] Run `git init` if needed.
+- [x] Confirm whether this folder is already a git repository.
+- [x] Run `git init` if needed.
 - [x] Create or review `.gitignore`.
 - [x] Remove local `.DS_Store` files before the first commit.
 - [x] Ensure `.DS_Store` is ignored by git.
-- [ ] Check all files that should be committed.
-- [ ] Confirm no private, temporary, or unrelated files are included.
-- [ ] Create the initial commit.
+- [x] Check all files that should be committed.
+- [x] Confirm no private, temporary, or unrelated files are included.
+- [x] Create the initial commit.
 
 Acceptance criteria:
 
-- [ ] `git status` is clean after commit.
-- [ ] The commit contains the complete persona package.
-- [ ] No unrelated local files are included.
+- [x] `git status` is clean after commit.
+- [x] The commit contains the complete persona package.
+- [x] No unrelated local files are included.
 
 ## Phase 9 — GitHub Upload
 
@@ -250,4 +250,4 @@ Acceptance criteria:
 
 ## Current Next Task
 
-- [ ] Start Phase 8 by checking git repository setup and commit readiness.
+- [ ] Start Phase 9 by creating or connecting the GitHub repository.
