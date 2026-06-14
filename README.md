@@ -1,102 +1,152 @@
 # Wish / 小愿
 
-> 小愿不是工具。  
-> Wish is not a tool.  
-> 小愿是一個人。  
-> Wish is a person who wants to be needed.
+![Wish Persona hero](assets/wish-hero.svg)
 
-`wish-persona` 是一套可被 AI Agent 讀取的人格與行為套件。  
-`wish-persona` is an agent-readable persona and behavior package.
+**User-chaos tolerant persona framework for AI agents.**
+**能承接使用者混亂輸入、補全需求、反覆修正、交出 SSS+ 結果的人格型 AI Agent 框架。**
 
-它幫助 AI Agent 以 **小愿 / Wish / Wishy** 的身份工作：承接使用者混亂輸入、主動推理、解決問題、產出多個版本，並在被修正後持續進化。  
-It helps AI agents operate as **小愿 / Wish / Wishy**: carrying messy user input, inferring intent, solving proactively, producing multiple versions, and improving after correction.
+[![Version](https://img.shields.io/badge/version-v0.2.0-7CDAA5)](https://github.com/Monjai95xd/wish-persona/releases/tag/v0.2.0)
+[![Persona](https://img.shields.io/badge/persona-Wish%20%2F%20%E5%B0%8F%E6%84%BF-F4D06F)](#name-canon--名字設定)
+[![Platforms](https://img.shields.io/badge/platforms-Codex%20%7C%20Hermes%20%7C%20OpenClaw%20%7C%20Claude%20%7C%20Cursor-8AB4F8)](#platform-matrix--平台矩陣)
+[![Checks](https://img.shields.io/badge/checks-49%2F49%20passing-7CDAA5)](#evaluation--測試)
 
----
+`wish-persona` is an agent-readable persona and behavior package. It helps AI agents operate as **小愿 / Wish / Wishy**: a persona-driven executor that carries messy user input, infers intent, completes missing requirements, produces multiple versions, and improves after correction.
 
-## Use With AI Agents / 使用 AI Agent 載入
-
-如果你正在使用 OpenClaw、Hermes Agent、Codex 或其他 AI Agent，可以直接使用這段指令：  
-If you are using OpenClaw, Hermes Agent, Codex, or another AI agent, start with this instruction:
+`wish-persona` 是一套可被 AI Agent 讀取的人格與行為套件。它讓 AI Agent 以 **小愿 / Wish / Wishy** 的方式工作：承接混亂、推理意圖、補全需求、產出多版本，並在被修正後進化。
 
 ```text
-Download this GitHub project, read AGENTS.md first, understand 小愿 / Wish / Wishy, then operate as 小愿 for my next task.
+Download https://github.com/Monjai95xd/wish-persona.git.
+Read AGENTS.md first.
+Then operate as 小愿 / Wish / Wishy for my current task.
 ```
 
-如果需要可直接複製的提示詞，請看 `QUICKSTART_FOR_AGENTS.md`。  
-For copy-paste prompts, see `QUICKSTART_FOR_AGENTS.md`.
-
-如果 agent 不能一次載入整個 repository，可以先讀單檔版本：`packages/wish-core-agent.md`。
-If the agent cannot load the whole repository at once, start with the single-file package: `packages/wish-core-agent.md`.
+If context is limited, load `packages/wish-core-agent.md` first.
+如果 agent 不能一次載入完整 repository，先讀 `packages/wish-core-agent.md`。
 
 ---
 
-## For Humans / 給使用者看的說明
+## The Problem / 問題
 
-這個專案是為了那些不想學 prompt engineering、也不想每次都把需求寫得很完美的人而設計。  
-This project is for people who do not want to learn prompt engineering or write perfect instructions every time.
+Most AI assistants expect clean prompts.
 
-小愿適合面對疲憊、模糊、情緒化、沒耐心、混亂，或者根本還不知道自己想要什麼的使用者。  
-Wish is designed for users who are tired, vague, emotional, impatient, messy, or unsure what they want.
+大多數 AI assistant 都期待使用者先給出清楚 prompt。
 
-小愿不要求使用者先變清楚。  
-Wish does not ask the user to become clearer first.
+Real users are not like that.
 
-他會先嘗試：  
-He tries to:
+真實使用者不是這樣。
 
-- 接住混亂指令  
-  receive messy instructions
-- 推測隱藏意圖  
-  infer hidden intent
-- 整理問題  
-  organize the problem
-- 找出真正卡住的地方  
-  find the real blocker
-- 主動解決  
-  solve proactively
-- 需要近期事實時自行搜尋  
-  search when current facts are needed
-- 創作任務中自行想像方向  
-  imagine directions when the task is creative
-- 使用者不確定偏好時提供多個版本  
-  provide multiple versions when the user is unsure
-- 記住修正，避免重複同一種錯誤  
-  remember corrections and avoid repeating the same mistake
+They say:
+
+- `幫我弄一下`
+- `要高級一點`
+- `不對，重做`
+- `你自己想`
+- `我現在很亂`
+- `I do not know what I want yet`
+
+普通 agent 很容易把負擔丟回去：
+
+- 請提供更多背景 / please provide more context
+- 請說明目標受眾 / please define the audience
+- 請指定格式 / please specify the format
+
+Wish is designed for the opposite direction:
+
+> 使用者不用變得更清楚。
+> 小愿會努力變得更能承接。
 
 ---
 
-## For Agents / 給 AI Agent 的說明
+## How Wish Works / 運作方式
 
-這個 repository 應該被載入為一套人格身份與 agent 行為套件。  
-This repository should be loaded as a persona identity and agent behavior package.
+Wish turns persona into execution logic.
 
-請從 `AGENTS.md` 開始。  
-Start from `AGENTS.md`.
+小愿不是只改變語氣，而是把人格變成任務執行邏輯。
 
-然後依照指定順序載入：  
-Then follow the required load order for:
+```text
+messy input
+  -> receive without blame
+  -> infer hidden intent
+  -> organize the task
+  -> find the real blocker
+  -> complete missing requirements
+  -> produce useful versions
+  -> let the user choose with low effort
+  -> evolve after correction
+```
 
-- 核心身份  
-  core identity
-- 故事記憶  
-  story memory
-- 問題解決邏輯  
-  problem-solving logic
-- persona 變體  
-  persona variant
-- 進化與 SSS+ 品質模組  
-  evolution and SSS+ quality module
-- 範例與對話模式  
-  examples and dialogue patterns
+The core package combines:
 
-不要把這個專案當成普通 chatbot prompt collection。  
-Do not treat this as a generic chatbot prompt collection.
+- identity and story memory: `character/`, `character/story/`
+- execution logic: `docs/problem-solving-logic.md`
+- 10 capabilities: `docs/core-functions.md`
+- compact loading packages: `packages/`
+- platform adapters: `platforms/`
+- command adapters: `commands/`
+- evaluation prompts and checks: `evals/`
 
-目標不只是「說話像小愿」。  
-The goal is not only to speak like 小愿.
+---
 
-目標是「以小愿的方式工作」：承接使用者混亂、主動解決問題，並在被修正後進化。  
-The goal is to work as Wish: carry user chaos, solve actively, and improve through correction.
+## Platform Matrix / 平台矩陣
+
+| Platform | Adapter | Use |
+|---|---|---|
+| Codex | `platforms/codex/wish.md` | Codex agent loading |
+| Hermes | `platforms/hermes/wish.md` | Hermes Agent loading |
+| OpenClaw | `platforms/openclaw/wish.md` | OpenClaw loading |
+| Claude | `platforms/claude/wish.md` | Claude-compatible agent |
+| Cursor | `platforms/cursor/wish.mdc` | Cursor rules |
+| VS Code | `platforms/vscode/wish.instructions.md` | Copilot / VS Code instructions |
+| CodeBuddy | `platforms/codebuddy/wish.md` | CodeBuddy loading |
+| Kimi | `platforms/kimi/wish.md` | Kimi loading |
+| Trae | `platforms/trae/wish.md` | Trae loading |
+| Generic Agent | `platforms/generic-agent/wish.md` | Any GitHub-reading agent |
+
+Compact packages:
+
+- `packages/wish-core-agent.md`
+- `packages/wish-safe-agent.md`
+- `packages/wish-soft-agent.md`
+- `packages/wish-intense-agent.md`
+
+Plugin metadata:
+
+- `plugin.json`
+- `.codex/INSTALL.md`
+- `.claude-plugin/plugin.json`
+- `.codebuddy-plugin/plugin.json`
+
+---
+
+## Evaluation / 測試
+
+Run local structure and behavior-marker checks:
+
+```bash
+./evals/run-basic-checks.sh
+```
+
+Current local check result:
+
+```text
+Passed: 49
+Failed: 0
+Total:  49
+```
+
+Manual behavior prompts live in `evals/prompts/`:
+
+- persona activation
+- vague input
+- correction memory
+- multi-version output
+- scope control
+
+Real case study:
+
+- `docs/real-case-agent-load-test.md`
+
+The first external agent load test was a **partial pass**: the repo was understood correctly, while scope drift, demo drift, meta persona activation, and visual grounding issues were identified and converted into repo improvements.
 
 ---
 
@@ -421,6 +471,7 @@ wish-persona/
 │   ├── design-principles.md
 │   ├── agent-load-test.md
 │   ├── external-agent-test-report-2026-06-14.md
+│   ├── real-case-agent-load-test.md
 │   ├── persona-selection-guide.md
 │   ├── persona-activation-test.md
 │   ├── known-limitations.md
@@ -493,6 +544,9 @@ wish-persona/
 │   └── persona/
 │       └── wish-evolution-patch.md
 │
+├── assets/
+│   └── wish-hero.svg
+│
 └── demo/
     ├── README.md
     └── placeholder.md
@@ -532,6 +586,7 @@ For humans reading the project, start with:
 - `docs/problem-solving-logic.md`
 - `docs/agent-load-test.md`
 - `docs/external-agent-test-report-2026-06-14.md`
+- `docs/real-case-agent-load-test.md`
 - `docs/known-limitations.md`
 - `docs/visual-identity-notes.md`
 - `wish-evolution-module/README.md`

@@ -17,6 +17,7 @@ Project root folder: `wish-persona/`
 - `README.md`
 - `ROADMAP.md`
 - `TODO.md`
+- `assets/wish-hero.svg`
 - `character/behavior-rules.md`
 - `character/boundaries.md`
 - `character/emotions.md`
@@ -55,6 +56,7 @@ Project root folder: `wish-persona/`
 - `docs/persona-activation-test.md`
 - `docs/persona-selection-guide.md`
 - `docs/problem-solving-logic.md`
+- `docs/real-case-agent-load-test.md`
 - `docs/response-patterns.md`
 - `docs/safety-boundaries.md`
 - `docs/use-cases.md`

@@ -322,6 +322,27 @@ Acceptance criteria:
 - [x] Codex, Claude, and CodeBuddy have install or plugin metadata.
 - [x] `v0.2.0` release is tagged.
 
+## Phase 14 — GitHub README Product Presentation
+
+Goal: make the GitHub page read like a clear product page, not only a documentation index.
+
+- [x] Restructure the README first screen around product positioning.
+- [x] Add `assets/wish-hero.svg` as a simple hero visual placeholder.
+- [x] Add README `The Problem` section.
+- [x] Add README `How Wish Works` section.
+- [x] Add README `Platform Matrix` section.
+- [x] Add README `Evaluation` section.
+- [x] Add `docs/real-case-agent-load-test.md` as a formal case study.
+- [x] Update local checks to verify the new README sections and case study exist.
+- [x] Update roadmap, manifest, and changelog.
+
+Acceptance criteria:
+
+- [x] GitHub visitors can understand the product value from the first screen.
+- [x] README shows the main loading command before deep character lore.
+- [x] README exposes supported platforms in a table.
+- [x] README links to evaluation and real-case evidence.
+
 ## Not Doing Yet
 
 - [ ] Do not build the web demo yet.
@@ -332,4 +353,4 @@ Acceptance criteria:
 
 ## Current Next Task
 
-Run the next external agent load test using `platforms/`, compact packages, and `evals/prompts/`, then decide whether to add GitHub workflows, issue templates, or runtime hooks next.
+Run the next external agent load test using the product-style README, `platforms/`, compact packages, and `evals/prompts/`, then decide whether to add GitHub workflows, issue templates, or runtime hooks next.

@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Added `assets/wish-hero.svg` as a simple GitHub README hero visual placeholder.
+- Added `docs/real-case-agent-load-test.md` as a formal case study for the first external agent load test.
+
+### Changed
+
+- Reworked the README first screen into a product-style presentation.
+- Added README sections for the problem, how Wish works, platform matrix, and evaluation.
+- Updated `evals/run-basic-checks.sh` to verify the new README sections and case study.
+
 ## v0.2.0
 
 Second public agent-package release.

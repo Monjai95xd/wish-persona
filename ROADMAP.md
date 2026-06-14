@@ -67,6 +67,10 @@
 
 - [x] Add `docs/ARCHITECTURE.md`
 - [x] Add `docs/core-functions.md` for Wish's 10 core functions
+- [x] Add product-style README first screen
+- [x] Add `docs/real-case-agent-load-test.md`
+- [x] Add README Problem, How Wish Works, Platform Matrix, and Evaluation sections
+- [x] Add `assets/wish-hero.svg`
 - [x] Add `packages/` as compact single-file loading layer
 - [x] Add `packages/wish-core-agent.md`
 - [x] Add `evals/` as repeatable external agent behavior tests
