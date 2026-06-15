@@ -374,6 +374,21 @@ Acceptance criteria:
 - [x] `evals/run-basic-checks.sh` passes after all updates.
 - [x] `v0.3.0` is committed, tagged, and pushed.
 
+## Phase 16 — Contact Asset And Public Contact Info
+
+Goal: make the GitHub page show clear public contact methods in both image and text form.
+
+- [x] Add `assets/wish-contact-card.png`.
+- [x] Add `docs/contact.md` with text contact details.
+- [x] Add README `Contact / 聯絡` section.
+- [x] Update local checks to verify the contact image and text data exist.
+
+Acceptance criteria:
+
+- [x] GitHub visitors can see the contact methods from the README.
+- [x] Agents can read contact methods from a plain text file.
+- [x] Local checks verify the contact assets.
+
 ## Not Doing Yet
 
 - [ ] Do not build the web demo yet.

@@ -6,6 +6,8 @@ Memory & Delivery Upgrade.
 
 ### Added
 
+- Added `assets/wish-contact-card.png` with public project contact details.
+- Added `docs/contact.md` as a text contact record for GitHub visitors and agents.
 - Added `assets/wish-hero.svg` as a simple GitHub README hero visual placeholder.
 - Added `docs/real-case-agent-load-test.md` as a formal case study for the first external agent load test.
 - Added `memory/` with preference, disappointment, and success memory.
@@ -15,6 +17,7 @@ Memory & Delivery Upgrade.
 
 ### Changed
 
+- Added README contact section with image and text contact methods.
 - Reworked the README first screen into a product-style presentation.
 - Added README sections for the problem, how Wish works, platform matrix, and evaluation.
 - Added README section for `v0.3.0 — Memory & Delivery Upgrade`.

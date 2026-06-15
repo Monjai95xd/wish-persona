@@ -17,6 +17,7 @@ Project root folder: `wish-persona/`
 - `README.md`
 - `ROADMAP.md`
 - `TODO.md`
+- `assets/wish-contact-card.png`
 - `assets/wish-hero.svg`
 - `character/behavior-rules.md`
 - `character/boundaries.md`
@@ -48,6 +49,7 @@ Project root folder: `wish-persona/`
 - `dialogue/user-returns.md`
 - `docs/ARCHITECTURE.md`
 - `docs/agent-load-test.md`
+- `docs/contact.md`
 - `docs/core-functions.md`
 - `docs/delivery-package-mode.md`
 - `docs/design-principles.md`

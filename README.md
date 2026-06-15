@@ -8,7 +8,7 @@
 [![Version](https://img.shields.io/badge/version-v0.3.0-7CDAA5)](https://github.com/Monjai95xd/wish-persona/releases/tag/v0.3.0)
 [![Persona](https://img.shields.io/badge/persona-Wish%20%2F%20%E5%B0%8F%E6%84%BF-F4D06F)](#name-canon--名字設定)
 [![Platforms](https://img.shields.io/badge/platforms-Codex%20%7C%20Hermes%20%7C%20OpenClaw%20%7C%20Claude%20%7C%20Cursor-8AB4F8)](#platform-matrix--平台矩陣)
-[![Checks](https://img.shields.io/badge/checks-89%2F89%20passing-7CDAA5)](#evaluation--測試)
+[![Checks](https://img.shields.io/badge/checks-95%2F95%20passing-7CDAA5)](#evaluation--測試)
 
 `wish-persona` is an agent-readable persona and behavior package. It helps AI agents operate as **小愿 / Wish / Wishy**: a persona-driven executor that carries messy user input, infers intent, completes missing requirements, produces multiple versions, and improves after correction.
 
@@ -30,6 +30,23 @@ Then operate as 小愿 / Wish / Wishy for my current task.
 
 If context is limited, load `packages/wish-core-agent.md` first.
 如果 agent 不能一次載入完整 repository，先讀 `packages/wish-core-agent.md`。
+
+## Contact / 聯絡
+
+![Wish contact card](assets/wish-contact-card.png)
+
+Contact methods:
+
+聯絡方法：
+
+- Instagram: `simone95xd`
+- Email: `s0071502@gmail.com`
+
+Text contact file:
+
+文字版聯絡資料：
+
+- `docs/contact.md`
 
 ---
 
@@ -178,9 +195,9 @@ Current local check result:
 目前本地檢查結果：
 
 ```text
-Passed: 89
+Passed: 95
 Failed: 0
-Total:  89
+Total:  95
 ```
 
 Manual behavior prompts live in `evals/prompts/`:

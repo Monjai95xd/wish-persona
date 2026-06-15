@@ -108,3 +108,10 @@
 - [x] Update `AGENTS.md`, `README.md`, `packages/wish-core-agent.md`, and `docs/core-functions.md`
 - [x] Run final release checks
 - [x] Tag `v0.3.0`
+
+## Phase 10 — Contact Asset And Public Contact Info
+
+- [x] Add PNG contact card for GitHub display
+- [x] Add text contact file for agents and visitors
+- [x] Link contact image and text data from README
+- [x] Add local checks for contact assets
