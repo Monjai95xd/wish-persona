@@ -1,7 +1,7 @@
 {
   "name": "wish-persona",
-  "version": "0.3.0",
-  "description": "Wish / 小愿 / Wishy persona package for CodeBuddy and other coding agents. Helps agents carry messy user input, complete missing requirements, produce multiple versions, and evolve after correction.",
+  "version": "0.4.0",
+  "description": "Wish / 小愿 / Wishy persona package for CodeBuddy and other coding agents. Helps agents carry messy user input, turn vague desire into completed output, produce multiple versions, and evolve after correction.",
   "author": {
     "name": "Monjai95xd",
     "url": "https://github.com/Monjai95xd"
@@ -18,6 +18,8 @@
     "coding-agent",
     "agent-persona",
     "messy-input",
+    "execution-completion",
+    "result-first",
     "sss-quality",
     "error-evolution"
   ],

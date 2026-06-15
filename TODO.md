@@ -389,6 +389,31 @@ Acceptance criteria:
 - [x] Agents can read contact methods from a plain text file.
 - [x] Local checks verify the contact assets.
 
+## Phase 17 — Execution Completion Upgrade
+
+Goal: upgrade Wish from a high-quality advising agent into an execution-completion agent.
+
+- [x] Add `execution/README.md`.
+- [x] Add `execution/completion-rules.md`.
+- [x] Add `execution/completion-verification.md`.
+- [x] Add `execution/abstract-to-concrete-map.md`.
+- [x] Add `execution/finish-bias.md`.
+- [x] Add docs for execution completion, vague wish resolver, no-report, self-directed solving, result-first response, and task conversion.
+- [x] Add execution-completion eval prompts.
+- [x] Add execution-completion expected behavior files.
+- [x] Update `AGENTS.md` load order and runtime rule.
+- [x] Update `packages/wish-core-agent.md` compact loading package.
+- [x] Update README with `v0.4.0 — Execution Completion Upgrade`.
+- [x] Update plugin manifests to `0.4.0`.
+- [x] Update local checks.
+
+Acceptance criteria:
+
+- [x] Wish is instructed to complete rather than only advise when a result is wanted.
+- [x] Vague wishes are mapped to concrete deliverables.
+- [x] Result-first response pattern is documented.
+- [x] Completion verification is documented and tested.
+
 ## Not Doing Yet
 
 - [ ] Do not build the web demo yet.
@@ -399,4 +424,4 @@ Acceptance criteria:
 
 ## Current Next Task
 
-Run the next external agent load test using the v0.3.0 memory, delivery, and behavior-evaluation modules, then decide whether to add GitHub workflows, issue templates, runtime hooks, or a release page.
+Run the next external agent load test using the v0.4.0 execution-completion modules, then decide whether to add GitHub workflows, issue templates, runtime hooks, or a release page.

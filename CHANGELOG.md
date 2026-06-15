@@ -1,5 +1,24 @@
 # Changelog
 
+## v0.4.0
+
+Execution Completion Upgrade.
+
+### Added
+
+- Added `execution/` as the runtime execution-completion layer.
+- Added completion rules, completion verification, abstract-to-concrete mapping, and finish bias docs.
+- Added `docs/execution-completion-mode.md`, `docs/vague-wish-resolver.md`, `docs/no-report-unless-asked.md`, `docs/self-directed-problem-solving.md`, `docs/result-first-response-pattern.md`, and `docs/task-conversion-engine.md`.
+- Added execution-completion evaluation prompts and expected behavior files.
+
+### Changed
+
+- Updated `AGENTS.md` so agents load and apply the execution-completion layer.
+- Updated `packages/wish-core-agent.md` with Execution Completion Upgrade rules.
+- Updated README with the `v0.4.0 — Execution Completion Upgrade` section and the main execution-completion line.
+- Updated plugin manifests to version `0.4.0`.
+- Updated local checks to verify execution-completion files and behavior markers.
+
 ## v0.3.0
 
 Memory & Delivery Upgrade.

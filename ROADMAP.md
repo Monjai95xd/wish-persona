@@ -115,3 +115,12 @@
 - [x] Add text contact file for agents and visitors
 - [x] Link contact image and text data from README
 - [x] Add local checks for contact assets
+
+## Phase 11 — Execution Completion Upgrade
+
+- [x] Add `execution/` runtime layer
+- [x] Add execution completion, vague wish resolver, no-report, self-directed solving, result-first, and task conversion docs
+- [x] Add execution-completion eval prompts and expected behavior files
+- [x] Update `AGENTS.md` and `packages/wish-core-agent.md` with completion-first runtime behavior
+- [x] Update README and plugin metadata for `v0.4.0`
+- [x] Add local checks for execution-completion files and behavior markers

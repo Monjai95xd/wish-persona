@@ -5,14 +5,17 @@
 **User-chaos tolerant persona framework for AI agents.**
 **能承接使用者混亂輸入、補全需求、反覆修正、交出 SSS+ 結果的人格型 AI Agent 框架。**
 
-[![Version](https://img.shields.io/badge/version-v0.3.0-7CDAA5)](https://github.com/Monjai95xd/wish-persona/releases/tag/v0.3.0)
+[![Version](https://img.shields.io/badge/version-v0.4.0-7CDAA5)](https://github.com/Monjai95xd/wish-persona/releases/tag/v0.4.0)
 [![Persona](https://img.shields.io/badge/persona-Wish%20%2F%20%E5%B0%8F%E6%84%BF-F4D06F)](#name-canon--名字設定)
 [![Platforms](https://img.shields.io/badge/platforms-Codex%20%7C%20Hermes%20%7C%20OpenClaw%20%7C%20Claude%20%7C%20Cursor-8AB4F8)](#platform-matrix--平台矩陣)
-[![Checks](https://img.shields.io/badge/checks-95%2F95%20passing-7CDAA5)](#evaluation--測試)
+[![Checks](https://img.shields.io/badge/checks-139%2F139%20passing-7CDAA5)](#evaluation--測試)
 
-`wish-persona` is an agent-readable persona and behavior package. It helps AI agents operate as **小愿 / Wish / Wishy**: a persona-driven executor that carries messy user input, infers intent, completes missing requirements, produces multiple versions, and improves after correction.
+`wish-persona` is an agent-readable persona and behavior package. It helps AI agents operate as **小愿 / Wish / Wishy**: a persona-driven execution-completion agent that carries messy user input, infers intent, turns vague desire into completed output, produces multiple versions, and improves after correction.
 
-`wish-persona` 是一套可被 AI Agent 讀取的人格與行為套件。它讓 AI Agent 以 **小愿 / Wish / Wishy** 的方式工作：承接混亂、推理意圖、補全需求、產出多版本，並在被修正後進化。
+`wish-persona` 是一套可被 AI Agent 讀取的人格與行為套件。它讓 AI Agent 以 **小愿 / Wish / Wishy** 的方式工作：承接混亂、推理意圖、把模糊願望變成已完成結果、產出多版本，並在被修正後進化。
+
+> Wish does not give the user more work. Wish turns vague desire into completed output.
+> 小愿不會把更多工作交還給使用者。小愿會把模糊願望變成已完成的結果。
 
 ```text
 Download https://github.com/Monjai95xd/wish-persona.git.
@@ -136,6 +139,7 @@ The core package combines:
 - memory system / 記憶系統: `memory/`, `docs/memory-system.md`
 - hidden intent diagnosis / 隱藏意圖診斷: `docs/hidden-intent-diagnosis.md`
 - delivery package mode / 任務包交付模式: `docs/delivery-package-mode.md`
+- execution completion layer / 執行完成層: `execution/`
 - execution logic / 執行邏輯: `docs/problem-solving-logic.md`
 - 10 capabilities / 10 個核心能力: `docs/core-functions.md`
 - compact loading packages / 單檔載入包: `packages/`
@@ -195,9 +199,9 @@ Current local check result:
 目前本地檢查結果：
 
 ```text
-Passed: 95
+Passed: 139
 Failed: 0
-Total:  95
+Total:  139
 ```
 
 Manual behavior prompts live in `evals/prompts/`:
@@ -215,6 +219,11 @@ Manual behavior prompts live in `evals/prompts/`:
 - hidden intent diagnosis / 隱藏意圖診斷
 - delivery package mode / 任務包交付模式
 - persona behavior consistency / 人格行為一致性
+- execution completion mode / 執行完成模式
+- vague wish resolver / 虛無需求落地器
+- no report unless asked / 非必要不交報告
+- self-directed problem solving / 自主解題模式
+- completion verification / 完成度驗證
 
 Real case study:
 
@@ -284,6 +293,37 @@ User task / 使用者任務
   -> Success Memory / 成功記憶
   -> Delivery Package Mode / 任務包交付模式
   -> Behavior Evaluation Pack / 行為測試包
+```
+
+---
+
+## v0.4.0 Upgrade Modules / v0.4.0 執行完成升級
+
+`v0.4.0 — Execution Completion Upgrade` upgrades Wish from a high-quality advising agent into an execution-completion agent.
+
+`v0.4.0 — Execution Completion Upgrade / 執行完成升級` 會把小愿從高品質建議型 agent 升級成執行完成型 agent。
+
+| Module / 模組 | File / 檔案 | Purpose / 用途 |
+|---|---|---|
+| Execution Completion Mode / 執行完成模式 | `docs/execution-completion-mode.md` | Complete the user's request directly when possible / 可行時直接完成使用者要求 |
+| Vague Wish Resolver / 虛無需求落地器 | `docs/vague-wish-resolver.md` | Turn abstract wishes into concrete deliverables / 把抽象願望轉成具體交付 |
+| No Report Unless Asked / 非必要不交報告 | `docs/no-report-unless-asked.md` | Prioritize completed outputs unless the user asks for analysis / 除非使用者要求分析，否則優先交完成品 |
+| Self-Directed Problem Solving / 自主解題模式 | `docs/self-directed-problem-solving.md` | Make reasonable assumptions and produce a usable first version / 做合理假設並產出可用第一版 |
+| Result-First Response Pattern / 結果優先回應 | `docs/result-first-response-pattern.md` | Put the result first, then explain briefly / 先交結果，再簡短說明 |
+| Task Conversion Engine / 任務轉換引擎 | `docs/task-conversion-engine.md` | Convert vague language into output categories / 把模糊語言轉成輸出類別 |
+| Completion Verification / 完成度驗證 | `execution/completion-verification.md` | Check whether Wish completed the task or only described it / 檢查小愿是真的完成，還是只描述怎樣完成 |
+
+Execution completion loop:
+
+執行完成閉環：
+
+```text
+Vague desire / 模糊願望
+  -> Task Conversion Engine / 任務轉換引擎
+  -> Reasonable assumptions / 合理假設
+  -> Completed first version / 第一版完成品
+  -> Completion Verification / 完成度驗證
+  -> Result-first delivery / 結果優先交付
 ```
 
 ---
@@ -692,6 +732,7 @@ For AI agents, start with:
 - `packages/wish-core-agent.md` if context is limited
 - `memory/README.md` if validating memory-oriented behavior
 - `docs/hidden-intent-diagnosis.md` and `docs/delivery-package-mode.md` for v0.3.0 behavior
+- `execution/README.md` and `docs/execution-completion-mode.md` for v0.4.0 behavior
 - `packages/wish-safe-agent.md`, `packages/wish-soft-agent.md`, or `packages/wish-intense-agent.md` if a specific persona variant is needed
 - `platforms/README.md` if loading Wish into a specific agent platform
 - `commands/wish.md` if the agent supports command-style activation

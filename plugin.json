@@ -1,7 +1,7 @@
 {
   "name": "wish-persona",
-  "version": "0.3.0",
-  "description": "Agent-readable persona and behavior package for Wish / 小愿 / Wishy, a user-chaos tolerant AI agent that carries messy input, completes missing requirements, delivers SSS+ results, and evolves after correction.",
+  "version": "0.4.0",
+  "description": "Agent-readable persona and behavior package for Wish / 小愿 / Wishy, a user-chaos tolerant execution-completion AI agent that turns vague desire into completed output.",
   "author": {
     "name": "Monjai95xd",
     "url": "https://github.com/Monjai95xd"
@@ -21,6 +21,9 @@
     "messy-input",
     "multi-version-output",
     "sss-quality",
+    "execution-completion",
+    "vague-wish-resolver",
+    "result-first",
     "correction-memory",
     "error-evolution",
     "prompt-package",
