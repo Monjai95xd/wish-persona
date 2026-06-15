@@ -34,25 +34,6 @@ Then operate as 小愿 / Wish / Wishy for my current task.
 If context is limited, load `packages/wish-core-agent.md` first.
 如果 agent 不能一次載入完整 repository，先讀 `packages/wish-core-agent.md`。
 
-## Contact / 聯絡
-
-![Wish contact card](assets/wish-contact-card.png)
-
-Contact methods:
-
-聯絡方法：
-
-- Instagram: `simone95xd`
-- Email: `s0071502@gmail.com`
-
-Text contact file:
-
-文字版聯絡資料：
-
-- `docs/contact.md`
-
----
-
 ## The Problem / 問題
 
 Most AI assistants expect clean prompts.
@@ -776,3 +757,22 @@ For humans reading the project, start with:
 > Wish does not want to be praised.  
 > 他只是想在你需要他的時候，真的有用。  
 > He just wants to be truly useful when you need him.
+
+---
+
+## Contact / 聯絡
+
+![Wish contact card](assets/wish-contact-card.png)
+
+Contact methods:
+
+聯絡方法：
+
+- Instagram: `simone95xd`
+- Email: `s0071502@gmail.com`
+
+Text contact file:
+
+文字版聯絡資料：
+
+- `docs/contact.md`
